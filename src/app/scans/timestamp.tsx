@@ -1,6 +1,7 @@
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { useRouter } from "next/navigation"
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList } from "@/components/ui/breadcrumb"
 
 const recentTimestamps = [
   { id: 1, timestamp: "2023-04-15 08:00:00" },
@@ -23,32 +24,27 @@ export function TimestampCard() {
   const router = useRouter()
 
   const handleTimestampClick = (timestamp: string) => {
-    // Convert timestamp to URL-friendly format
     const formattedTimestamp = timestamp.replace(/\s/g, '_')
-    router.push(`/dashboard/scan/${formattedTimestamp}`)
+    router.push(`/scans/scan/${formattedTimestamp}`)
   }
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle className="text-sm">Timestamps</CardTitle>
-      </CardHeader>
-      <CardContent className="">
-        <ul className="space-y-2">
-          {recentTimestamps.map((item) => (
-            <li 
-              key={item.id} 
-              className="flex justify-start items-center"
-              onClick={() => handleTimestampClick(item.timestamp)}
-            >
-              <span className="text-sm bg-secondary-background hover:bg-border/50 w-full rounded-md px-2 py-2 cursor-pointer">
-                {item.timestamp}
-              </span>
-            </li>
-          ))}
-        </ul>
-      </CardContent>
-    </Card>
+    <div className="container mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {recentTimestamps.map((item) => (
+          <Card 
+            key={item.id} 
+            className="hover:shadow-lg hover:bg-secondary/50 transition-shadow cursor-pointer"
+            onClick={() => handleTimestampClick(item.timestamp)}
+          >
+            <CardHeader>
+              <CardTitle className="text-sm">{item.timestamp}</CardTitle>
+            </CardHeader>
+          
+          </Card>
+        ))}
+      </div>
+    </div>
   )
 }
 

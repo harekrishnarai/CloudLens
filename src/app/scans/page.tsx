@@ -1,7 +1,5 @@
 "use client"
 import { TimestampCard } from "./timestamp";
-import { RegionsCard } from "./region";
-import { ServicesCard } from "./services";
 import { Button } from "@/components/ui/button";
 
 export default function Dashboard() {
@@ -31,10 +29,9 @@ export default function Dashboard() {
         </div>
         <Button variant="default" size="sm" className="text-white font-medium w-[100px]">Scan Now</Button>
       </div>
-      <div className="gap-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="gap-3 grid grid-cols-1">
         <TimestampCard />
-        <RegionsCard />
-        <ServicesCard />
+        {/* <ServicesCard /> */}
       </div>
     </div>
   );

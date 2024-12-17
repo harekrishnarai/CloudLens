@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Button } from "../ui/button";
-import { ArrowLeft, ArrowRight, LayoutDashboard, Settings } from "lucide-react";
+import { ArrowLeft, ArrowRight, Clock, LayoutDashboard, Settings } from "lucide-react";
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -75,6 +75,19 @@ function Sidebar() {
               >
                 <LayoutDashboard size={16} className="fill-gray-200" />
                 <p className={clsx("text-sm", isRouteActive("/dashboard") ? "text-accent-foreground" : "text-gray-200")}>Dashboard</p>
+              </Button>
+            </Link>
+            <Link href="/scans">
+              <Button 
+                variant="ghost"
+                className={clsx(
+                  "flex items-center gap-x-2 w-full justify-start h-8 text-sm",
+                  isRouteActive("/scans") &&
+                    "bg-border text-accent-foreground"
+                )}
+              >
+                <Clock size={16} />
+                <p className={clsx("text-sm", isRouteActive("/scans") ? "text-accent-foreground" : "text-gray-200")}>Scans</p>
               </Button>
             </Link>
             <Link href="/settings">
