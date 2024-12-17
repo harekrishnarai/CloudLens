@@ -1,38 +1,88 @@
-"use client"
-import { TimestampCard } from "./timestamp";
-import { Button } from "@/components/ui/button";
+"use client";
 
-export default function Dashboard() {
+import { useState } from "react";
+import { TimestampSelector } from "./components/timestamp";
+import { RegionCard } from "./components/region-card";
+import { ServiceDrawer } from "./components/service-drawer";
+import { Button } from "@/components/ui/button";
+import { Breadcrumb, BreadcrumbLink, BreadcrumbItem, BreadcrumbPage } from "@/components/ui/breadcrumb";
+
+// Mock data for timestamps and regions
+const timestamps = [
+  "2023-06-01 00:00:00",
+  "2023-06-02 00:00:00",
+  "2023-06-03 00:00:00",
+  "2023-06-04 00:00:00",
+  "2023-06-05 00:00:00",
+  "2023-06-06 00:00:00",
+  "2023-06-07 00:00:00",
+  "2023-06-08 00:00:00",
+  "2023-06-09 00:00:00",
+  "2023-06-10 00:00:00",
+  "2023-06-11 00:00:00",
+  "2023-06-12 00:00:00",
+];
+
+const regions = [
+  { name: "us-east-1", resourceCount: 120, complianceScore: 92 },
+  { name: "us-west-2", resourceCount: 85, complianceScore: 88 },
+  { name: "eu-west-1", resourceCount: 95, complianceScore: 90 },
+  { name: "eu-central-1", resourceCount: 70, complianceScore: 95 },
+  { name: "ap-southeast-1", resourceCount: 60, complianceScore: 87 },
+  { name: "ap-northeast-1", resourceCount: 75, complianceScore: 93 },
+  { name: "sa-east-1", resourceCount: 40, complianceScore: 91 },
+  { name: "ca-central-1", resourceCount: 55, complianceScore: 89 },
+  { name: "ap-south-1", resourceCount: 65, complianceScore: 86 },
+  { name: "ap-southeast-2", resourceCount: 50, complianceScore: 94 },
+  { name: "eu-west-2", resourceCount: 45, complianceScore: 92 },
+  { name: "eu-west-3", resourceCount: 35, complianceScore: 96 },
+  { name: "eu-north-1", resourceCount: 30, complianceScore: 97 },
+  { name: "ap-east-1", resourceCount: 25, complianceScore: 95 },
+];
+
+export default function DashboardPage() {
+  const [selectedTimestamp, setSelectedTimestamp] = useState(timestamps[0]);
+  const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
+
   return (
-    <div className="container mx-auto p-4">
-      <div className=" flex justify-between items-start mb-4">
-        <div className="relative">
-          <input
-            type="search"
-            placeholder="Search..."
-            className="w-[300px] px-4 py-2 pl-10 text-sm border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+    <div className="space-y-3 w-full">
+      <div className="flex justify-between items-center px-3 py-2 border-b border-border">
+      <Breadcrumb>
+        <BreadcrumbItem>
+          <BreadcrumbLink href="/">Scans</BreadcrumbLink>
+        </BreadcrumbItem>
+      </Breadcrumb>
+
+      <Button
+          variant="default"
+          size="sm"
+          className="text-white font-medium w-[100px]"
+        >
+          Scan Now
+        </Button>
+      </div>
+      <div className="flex justify-between items-center px-3">
+          <p className="text-sm text-white font-medium">Regions</p>
+          <TimestampSelector
+            timestamps={timestamps}
+            onSelect={setSelectedTimestamp}
           />
-          <svg
-            className="absolute left-3 top-[0.7rem] h-4 w-4 text-gray-400"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-        </div>
-        <Button variant="default" size="sm" className="text-white font-medium w-[100px]">Scan Now</Button>
       </div>
-      <div className="gap-3 grid grid-cols-1">
-        <TimestampCard />
-        {/* <ServicesCard /> */}
+      <div className="grid grid-cols-1 px-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        {regions.map((region) => (
+          <RegionCard
+            key={region.name}
+            region={region}
+            onClick={() => setSelectedRegion(region.name)}
+          />
+        ))}
       </div>
+      <ServiceDrawer
+        isOpen={!!selectedRegion}
+        onClose={() => setSelectedRegion(null)}
+        region={selectedRegion}
+        timestamp={selectedTimestamp}
+      />
     </div>
   );
 }
