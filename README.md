@@ -1,4 +1,5 @@
-![Leonardo_Phoenix_09_Create_a_symbolic_logo_for_a_tool_called_C_0](https://github.com/user-attachments/assets/bdf09993-c5d0-4000-af3d-8e945134ef18)
+![CloudLens Logo](https://github.com/user-attachments/assets/41e784c2-9a32-4951-b4e4-85027cab66da)
+
 
 
 ## Project Description
