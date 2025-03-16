@@ -1,5 +1,3 @@
-# CloudLens
-
 ![Leonardo_Phoenix_09_Create_a_symbolic_logo_for_a_tool_called_C_0](https://github.com/user-attachments/assets/bdf09993-c5d0-4000-af3d-8e945134ef18)
 
 
