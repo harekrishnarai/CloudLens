@@ -90,12 +90,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Contributors
 Thanks to all the people who already contributed!  
-[Prashant Venkatesh](https://www.linkedin.com/in/prashant-venkatesh-99018999/)  
-[Aman Singh]([https://linkedin.com/in/](https://www.linkedin.com/in/amansingh311/))
-[Hare Krishna Rai](https://www.linkedin.com/in/harekrishnarai/)  
+[Prashant Venkatesh](https://www.linkedin.com/in/prashant-venkatesh-99018999/)    
+[Aman Singh](https://www.linkedin.com/in/amansingh311/)   
+[Hare Krishna Rai](https://www.linkedin.com/in/harekrishnarai/)   
 [Gaurav Joshi](https://www.linkedin.com/in/gauravjoshii/)  
-[Akash Nigam](https://linkedin.com/in/)
-
-<a href="https://github.com/harekrishnarai/Cloudlens/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=harekrishnarai/Cloudlens" />
-</a>
+[Akash Nigam](https://linkedin.com/in/akash-nigam-29590b207) 
