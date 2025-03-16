@@ -1,25 +1,30 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 
 interface RegionCardProps {
   region: {
-    name: string
-    resourceCount: number
-    complianceScore: number
-  }
-  onClick: () => void
+    name: string;
+    resourceCount: number;
+    complianceScore: number;
+  };
+  onClick: () => void;
 }
 
 export function RegionCard({ region, onClick }: RegionCardProps) {
   return (
-    <Card className="cursor-pointer hover:shadow-lg hover:bg-secondary-background transition-shadow" onClick={onClick}>
+    <Card
+      className="cursor-pointer hover:shadow-lg hover:bg-secondary-background transition-shadow"
+      onClick={onClick}
+    >
       <CardHeader>
         <CardTitle>{region.name}</CardTitle>
       </CardHeader>
-      <CardContent className='flex justify-between text-xs items-center'>
-      Compliance Score <Badge variant="outline" className='text-green-600'>{region.complianceScore}%</Badge>
+      <CardContent className="flex justify-between text-xs items-center">
+        Total Resources{' '}
+        <Badge variant="outline" className="text-green-600">
+          {region.resourceCount}
+        </Badge>
       </CardContent>
     </Card>
-  )
+  );
 }
-

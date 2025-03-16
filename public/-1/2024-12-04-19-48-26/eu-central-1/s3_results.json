@@ -1,0 +1,121 @@
+{
+  "S3Buckets": [
+    {
+      "BucketName": "aws-cloudtrail-logs-736789585779-cea208da",
+      "CreationDate": "2024-02-06T18:01:10+00:00",
+      "Region": "us-east-1",
+      "VersioningEnabled": false,
+      "EncryptionEnabled": true,
+      "PublicAccessBlockConfiguration": {
+        "BlockPublicAcls": true,
+        "IgnorePublicAcls": true,
+        "BlockPublicPolicy": true,
+        "RestrictPublicBuckets": true
+      }
+    },
+    {
+      "BucketName": "cf-templates-1sce8uhoxrh2c-ap-northeast-3",
+      "CreationDate": "2024-11-12T13:21:33+00:00",
+      "Region": "ap-northeast-3",
+      "VersioningEnabled": false,
+      "EncryptionEnabled": true,
+      "PublicAccessBlockConfiguration": {
+        "BlockPublicAcls": true,
+        "IgnorePublicAcls": true,
+        "BlockPublicPolicy": true,
+        "RestrictPublicBuckets": true
+      }
+    },
+    {
+      "BucketName": "cf-templates-1sce8uhoxrh2c-ap-south-1",
+      "CreationDate": "2024-11-09T08:28:22+00:00",
+      "Region": "ap-south-1",
+      "VersioningEnabled": false,
+      "EncryptionEnabled": true,
+      "PublicAccessBlockConfiguration": {
+        "BlockPublicAcls": true,
+        "IgnorePublicAcls": true,
+        "BlockPublicPolicy": true,
+        "RestrictPublicBuckets": true
+      }
+    },
+    {
+      "BucketName": "cf-templates-1sce8uhoxrh2c-us-west-2",
+      "CreationDate": "2024-11-09T08:28:22+00:00",
+      "Region": "us-west-2",
+      "VersioningEnabled": false,
+      "EncryptionEnabled": true,
+      "PublicAccessBlockConfiguration": {
+        "BlockPublicAcls": true,
+        "IgnorePublicAcls": true,
+        "BlockPublicPolicy": true,
+        "RestrictPublicBuckets": true
+      }
+    },
+    {
+      "BucketName": "my-sam-deployment-bucket-123456",
+      "CreationDate": "2024-12-03T22:55:37+00:00",
+      "Region": "us-east-1",
+      "VersioningEnabled": false,
+      "EncryptionEnabled": true,
+      "PublicAccessBlockConfiguration": {
+        "BlockPublicAcls": true,
+        "IgnorePublicAcls": true,
+        "BlockPublicPolicy": true,
+        "RestrictPublicBuckets": true
+      }
+    },
+    {
+      "BucketName": "sam-artifacts-wehre35565",
+      "CreationDate": "2024-12-03T22:42:30+00:00",
+      "Region": "us-east-1",
+      "VersioningEnabled": false,
+      "EncryptionEnabled": true,
+      "PublicAccessBlockConfiguration": {
+        "BlockPublicAcls": true,
+        "IgnorePublicAcls": true,
+        "BlockPublicPolicy": true,
+        "RestrictPublicBuckets": true
+      }
+    },
+    {
+      "BucketName": "sec-ass-reports-wehre35565",
+      "CreationDate": "2024-12-03T22:59:45+00:00",
+      "Region": "us-east-1",
+      "VersioningEnabled": false,
+      "EncryptionEnabled": true,
+      "PublicAccessBlockConfiguration": {
+        "BlockPublicAcls": true,
+        "IgnorePublicAcls": true,
+        "BlockPublicPolicy": true,
+        "RestrictPublicBuckets": true
+      }
+    },
+    {
+      "BucketName": "tenant-infra-setup",
+      "CreationDate": "2024-07-18T11:46:37+00:00",
+      "Region": "us-east-1",
+      "VersioningEnabled": false,
+      "EncryptionEnabled": true,
+      "PublicAccessBlockConfiguration": {
+        "BlockPublicAcls": true,
+        "IgnorePublicAcls": true,
+        "BlockPublicPolicy": true,
+        "RestrictPublicBuckets": true
+      }
+    },
+    {
+      "BucketName": "testinf0",
+      "CreationDate": "2024-12-01T10:14:09+00:00",
+      "Region": "us-east-1",
+      "VersioningEnabled": false,
+      "EncryptionEnabled": true,
+      "PublicAccessBlockConfiguration": {
+        "BlockPublicAcls": true,
+        "IgnorePublicAcls": true,
+        "BlockPublicPolicy": true,
+        "RestrictPublicBuckets": true
+      }
+    }
+  ]
+}

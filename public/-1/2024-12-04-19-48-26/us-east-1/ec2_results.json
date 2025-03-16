@@ -1,0 +1,76 @@
+{
+  "EC2Instances": [
+    {
+      "InstanceId": "i-0b75fcfe627865f5a",
+      "InstanceName": "CTFD-Platform",
+      "PrivateIpAddress": "172.31.30.36",
+      "PublicIpAddress": "54.144.3.109",
+      "State": "stopped",
+      "IMDSVersion": "IMDSv2"
+    },
+    {
+      "InstanceId": "i-080ee40147423337e",
+      "InstanceName": "Cyber-IO-Platform",
+      "PrivateIpAddress": "172.31.23.108",
+      "PublicIpAddress": "52.72.194.15",
+      "State": "stopped",
+      "IMDSVersion": "IMDSv2"
+    },
+    {
+      "InstanceId": "i-0529b66fb11146d2d",
+      "InstanceName": "terraform-ec2",
+      "PrivateIpAddress": "172.31.19.156",
+      "PublicIpAddress": "54.89.11.46",
+      "State": "running",
+      "IMDSVersion": "IMDSv2"
+    },
+    {
+      "InstanceId": "i-0ecabee322893458c",
+      "InstanceName": "Infosec_Testing",
+      "PrivateIpAddress": "172.31.20.128",
+      "PublicIpAddress": "54.160.52.95",
+      "State": "running",
+      "IMDSVersion": "IMDSv2"
+    },
+    {
+      "InstanceId": "i-0b7e98bfaca6f46fc",
+      "InstanceName": "vault-agent",
+      "PrivateIpAddress": "172.31.44.34",
+      "PublicIpAddress": "N/A",
+      "State": "stopped",
+      "IMDSVersion": "IMDSv1"
+    },
+    {
+      "InstanceId": "i-0704a95a1c371245b",
+      "InstanceName": "cyberio-chall",
+      "PrivateIpAddress": "172.31.86.117",
+      "PublicIpAddress": "N/A",
+      "State": "stopped",
+      "IMDSVersion": "IMDSv2"
+    },
+    {
+      "InstanceId": "i-00de8f6d838dedc7f",
+      "InstanceName": "cyberio-chall-web",
+      "PrivateIpAddress": "172.31.85.16",
+      "PublicIpAddress": "N/A",
+      "State": "stopped",
+      "IMDSVersion": "IMDSv2"
+    },
+    {
+      "InstanceId": "i-0589472db61b227b0",
+      "InstanceName": "vllm-analysis",
+      "PrivateIpAddress": "172.31.29.232",
+      "PublicIpAddress": "54.237.239.13",
+      "State": "running",
+      "IMDSVersion": "IMDSv2"
+    },
+    {
+      "InstanceId": "i-0bbe3dbf6392a441a",
+      "InstanceName": "Unnamed Instance",
+      "PrivateIpAddress": "172.31.27.159",
+      "PublicIpAddress": "100.27.206.148",
+      "State": "running",
+      "IMDSVersion": "IMDSv2"
+    }
+  ]
+}

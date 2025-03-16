@@ -1,0 +1,28 @@
+{
+  "KMSKeys": [
+    {
+      "KeyId": "4325b8fd-86b5-481f-9b41-dc840ffbdd33",
+      "Arn": "arn:aws:kms:us-east-2:736789585779:key/4325b8fd-86b5-481f-9b41-dc840ffbdd33",
+      "CreationDate": "2023-08-01T11:27:19.513000+00:00",
+      "Enabled": true,
+      "KeyState": "Enabled",
+      "KeyUsage": "ENCRYPT_DECRYPT",
+      "Origin": "AWS_KMS",
+      "KeyManager": "AWS",
+      "RotationEnabled": true,
+      "DeletionDate": null
+    },
+    {
+      "KeyId": "b4c07e65-c194-4ac1-a63a-555ecc30f486",
+      "Arn": "arn:aws:kms:us-east-2:736789585779:key/b4c07e65-c194-4ac1-a63a-555ecc30f486",
+      "CreationDate": "2023-10-26T14:00:44.285000+00:00",
+      "Enabled": true,
+      "KeyState": "Enabled",
+      "KeyUsage": "ENCRYPT_DECRYPT",
+      "Origin": "AWS_KMS",
+      "KeyManager": "AWS",
+      "RotationEnabled": true,
+      "DeletionDate": null
+    }
+  ]
+}

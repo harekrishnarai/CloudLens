@@ -1,0 +1,36 @@
+{
+  "EC2Instances": [
+    {
+      "InstanceId": "i-021919aebb94cf924",
+      "InstanceName": "redelk",
+      "PrivateIpAddress": "10.0.2.176",
+      "PublicIpAddress": "N/A",
+      "State": "stopped",
+      "IMDSVersion": "IMDSv2"
+    },
+    {
+      "InstanceId": "i-0bf0bbab1ccd1af29",
+      "InstanceName": "teamserver",
+      "PrivateIpAddress": "10.0.2.30",
+      "PublicIpAddress": "N/A",
+      "State": "stopped",
+      "IMDSVersion": "IMDSv2"
+    },
+    {
+      "InstanceId": "i-035eb7d91ae1736fc",
+      "InstanceName": "redirector",
+      "PrivateIpAddress": "10.0.1.247",
+      "PublicIpAddress": "N/A",
+      "State": "stopped",
+      "IMDSVersion": "IMDSv2"
+    },
+    {
+      "InstanceId": "i-0f8d3eb12035570bd",
+      "InstanceName": "bastion-host",
+      "PrivateIpAddress": "10.0.1.60",
+      "PublicIpAddress": "N/A",
+      "State": "stopped",
+      "IMDSVersion": "IMDSv2"
+    }
+  ]
+}

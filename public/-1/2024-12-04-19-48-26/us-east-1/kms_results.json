@@ -1,0 +1,52 @@
+{
+  "KMSKeys": [
+    {
+      "KeyId": "387a4231-94eb-4d23-8ab5-9b80398ca6a7",
+      "Arn": "arn:aws:kms:us-east-1:736789585779:key/387a4231-94eb-4d23-8ab5-9b80398ca6a7",
+      "CreationDate": "2024-12-04T18:50:58.097000+00:00",
+      "Enabled": true,
+      "KeyState": "Enabled",
+      "KeyUsage": "ENCRYPT_DECRYPT",
+      "Origin": "AWS_KMS",
+      "KeyManager": "AWS",
+      "RotationEnabled": false,
+      "DeletionDate": null
+    },
+    {
+      "KeyId": "4ef189ce-a73d-44d0-873e-753f0b7ecd2a",
+      "Arn": "arn:aws:kms:us-east-1:736789585779:key/4ef189ce-a73d-44d0-873e-753f0b7ecd2a",
+      "CreationDate": "2024-08-27T08:25:33.626000+00:00",
+      "Enabled": true,
+      "KeyState": "Enabled",
+      "KeyUsage": "ENCRYPT_DECRYPT",
+      "Origin": "AWS_KMS",
+      "KeyManager": "AWS",
+      "RotationEnabled": true,
+      "DeletionDate": null
+    },
+    {
+      "KeyId": "5a1eb557-057d-492c-b8ed-6702e19c69ce",
+      "Arn": "arn:aws:kms:us-east-1:736789585779:key/5a1eb557-057d-492c-b8ed-6702e19c69ce",
+      "CreationDate": "2024-02-08T07:58:53.065000+00:00",
+      "Enabled": true,
+      "KeyState": "Enabled",
+      "KeyUsage": "ENCRYPT_DECRYPT",
+      "Origin": "AWS_KMS",
+      "KeyManager": "AWS",
+      "RotationEnabled": true,
+      "DeletionDate": null
+    },
+    {
+      "KeyId": "8a346d1d-f512-4a0a-8a1a-dbd27313cc3e",
+      "Arn": "arn:aws:kms:us-east-1:736789585779:key/8a346d1d-f512-4a0a-8a1a-dbd27313cc3e",
+      "CreationDate": "2024-08-06T11:58:27.028000+00:00",
+      "Enabled": true,
+      "KeyState": "Enabled",
+      "KeyUsage": "ENCRYPT_DECRYPT",
+      "Origin": "AWS_KMS",
+      "KeyManager": "AWS",
+      "RotationEnabled": true,
+      "DeletionDate": null
+    }
+  ]
+}

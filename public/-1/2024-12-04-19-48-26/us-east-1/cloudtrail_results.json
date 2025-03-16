@@ -1,0 +1,16 @@
+{
+  "CloudTrails": [
+    {
+      "Name": "s3-logger",
+      "IsMultiRegionTrail": true,
+      "IsOrganizationTrail": false,
+      "LogFileValidationEnabled": true,
+      "KmsKeyId": "",
+      "IsLogging": false,
+      "LatestDeliveryError": "",
+      "LatestDeliveryTime": "2024-08-07T13:09:39.518000+00:00",
+      "S3BucketName": "aws-cloudtrail-logs-736789585779-a5ae3315",
+      "CloudWatchLogsLogGroupArn": ""
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "EBSVolumes": [
+    {
+      "VolumeId": "vol-0d7c2a06d7fd806f6",
+      "VolumeName": "Unnamed Instance",
+      "CreateTime": "2024-08-09T06:25:08.041000+00:00",
+      "Size": 8,
+      "State": "in-use",
+      "Encrypted": false,
+      "AttachedInstanceId": "i-0d4280b0971836331"
+    },
+    {
+      "VolumeId": "vol-0bb3ceee55a61c8f4",
+      "VolumeName": "Unnamed Instance",
+      "CreateTime": "2024-08-09T06:24:31.925000+00:00",
+      "Size": 8,
+      "State": "in-use",
+      "Encrypted": false,
+      "AttachedInstanceId": "i-071796a4981562d5b"
+    },
+    {
+      "VolumeId": "vol-0ce86bbce48a453d3",
+      "VolumeName": "Unnamed Instance",
+      "CreateTime": "2024-08-09T06:25:08.568000+00:00",
+      "Size": 8,
+      "State": "in-use",
+      "Encrypted": false,
+      "AttachedInstanceId": "i-0233bec9c7a7f2c6d"
+    },
+    {
+      "VolumeId": "vol-067057633bfefc974",
+      "VolumeName": "Unnamed Instance",
+      "CreateTime": "2024-11-16T17:36:20.400000+00:00",
+      "Size": 256,
+      "State": "in-use",
+      "Encrypted": false,
+      "AttachedInstanceId": "i-018d24576ce8cd25d"
+    }
+  ]
+}

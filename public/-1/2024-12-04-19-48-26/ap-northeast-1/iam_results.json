@@ -1,0 +1,58 @@
+{
+  "IAMUsers": [
+    {
+      "UserName": "Gaurav_Test",
+      "CreateDate": "2024-12-01T10:25:29+00:00",
+      "PasswordLastUsed": "2024-12-01T10:26:36+00:00",
+      "AccessKeysCount": 1,
+      "AccessKeysDetails": [
+        {
+          "AccessKeyId": "AKIA2XDAU35ZXUKZEYM3",
+          "CreateDate": "2024-12-01T10:30:32+00:00",
+          "Status": "Active"
+        }
+      ],
+      "MFAEnabled": false,
+      "MFADevices": []
+    },
+    {
+      "UserName": "hare.rai",
+      "CreateDate": "2024-11-04T13:45:14+00:00",
+      "PasswordLastUsed": "2024-11-04T16:57:50+00:00",
+      "AccessKeysCount": 1,
+      "AccessKeysDetails": [
+        {
+          "AccessKeyId": "AKIA2XDAU35ZR546SYVJ",
+          "CreateDate": "2024-12-03T21:52:05+00:00",
+          "Status": "Active"
+        }
+      ],
+      "MFAEnabled": false,
+      "MFADevices": []
+    },
+    {
+      "UserName": "Infosec_Testing",
+      "CreateDate": "2024-12-04T18:34:03+00:00",
+      "PasswordLastUsed": "Never",
+      "AccessKeysCount": 1,
+      "AccessKeysDetails": [
+        {
+          "AccessKeyId": "AKIA2XDAU35ZS33M3PVA",
+          "CreateDate": "2024-12-04T18:34:45+00:00",
+          "Status": "Active"
+        }
+      ],
+      "MFAEnabled": false,
+      "MFADevices": []
+    },
+    {
+      "UserName": "noushikh.c",
+      "CreateDate": "2024-11-27T04:01:12+00:00",
+      "PasswordLastUsed": "Never",
+      "AccessKeysCount": 0,
+      "AccessKeysDetails": [],
+      "MFAEnabled": false,
+      "MFADevices": []
+    }
+  ]
+}

@@ -1,59 +1,107 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { TimestampSelector } from "./components/timestamp";
-import { RegionCard } from "./components/region-card";
-import { ServiceDrawer } from "./components/service-drawer";
-import { Button } from "@/components/ui/button";
-import { Breadcrumb, BreadcrumbLink, BreadcrumbItem, BreadcrumbPage } from "@/components/ui/breadcrumb";
-
-// Mock data for timestamps and regions
-const timestamps = [
-  "2023-06-01 00:00:00",
-  "2023-06-02 00:00:00",
-  "2023-06-03 00:00:00",
-  "2023-06-04 00:00:00",
-  "2023-06-05 00:00:00",
-  "2023-06-06 00:00:00",
-  "2023-06-07 00:00:00",
-  "2023-06-08 00:00:00",
-  "2023-06-09 00:00:00",
-  "2023-06-10 00:00:00",
-  "2023-06-11 00:00:00",
-  "2023-06-12 00:00:00",
-];
-
-const regions = [
-  { name: "us-east-1", resourceCount: 120, complianceScore: 92 },
-  { name: "us-west-2", resourceCount: 85, complianceScore: 88 },
-  { name: "eu-west-1", resourceCount: 95, complianceScore: 90 },
-  { name: "eu-central-1", resourceCount: 70, complianceScore: 95 },
-  { name: "ap-southeast-1", resourceCount: 60, complianceScore: 87 },
-  { name: "ap-northeast-1", resourceCount: 75, complianceScore: 93 },
-  { name: "sa-east-1", resourceCount: 40, complianceScore: 91 },
-  { name: "ca-central-1", resourceCount: 55, complianceScore: 89 },
-  { name: "ap-south-1", resourceCount: 65, complianceScore: 86 },
-  { name: "ap-southeast-2", resourceCount: 50, complianceScore: 94 },
-  { name: "eu-west-2", resourceCount: 45, complianceScore: 92 },
-  { name: "eu-west-3", resourceCount: 35, complianceScore: 96 },
-  { name: "eu-north-1", resourceCount: 30, complianceScore: 97 },
-  { name: "ap-east-1", resourceCount: 25, complianceScore: 95 },
-];
+import { useState, useEffect } from 'react';
+import { TimestampSelector } from './components/timestamp';
+import { RegionCard } from './components/region-card';
+import { ServiceDrawer } from './components/service-drawer';
+import { Button } from '@/components/ui/button';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbPage,
+} from '@/components/ui/breadcrumb';
+import {
+  getAvailableTimestamps,
+  getAvailableRegions,
+  getAvailableServices,
+} from './service/scan-data.service';
+import { RegionCardSkeleton } from './components/region-card-skeleton';
+import { Skeleton } from '@/components/ui/skeleton';
 
 export default function DashboardPage() {
-  const [selectedTimestamp, setSelectedTimestamp] = useState(timestamps[0]);
+  const [timestamps, setTimestamps] = useState<string[]>([]);
+  const [selectedTimestamp, setSelectedTimestamp] = useState<string>('');
+  const [regions, setRegions] = useState<
+    { name: string; resourceCount: number; complianceScore: number }[]
+  >([]);
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
+  const [availableServices, setAvailableServices] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isLoadingServices, setIsLoadingServices] = useState(false);
+
+  useEffect(() => {
+    // Load available timestamps
+    setIsLoading(true);
+    getAvailableTimestamps().then((timestamps) => {
+      setTimestamps(timestamps);
+      if (timestamps.length > 0) {
+        setSelectedTimestamp(timestamps[0]);
+      }
+      setIsLoading(false);
+    });
+  }, []);
+
+  useEffect(() => {
+    if (selectedTimestamp) {
+      // Load available regions for selected timestamp
+      setIsLoading(true);
+      getAvailableRegions(selectedTimestamp).then(async (regionNames) => {
+        const regionsWithData = regionNames.map((name) => ({
+          name,
+          resourceCount: 0, // This will be updated when we load services
+          complianceScore: 90, // Default score, could be calculated based on service data
+        }));
+        setRegions(regionsWithData);
+
+        // Update resource counts for each region
+        const updatedRegions = await Promise.all(
+          regionNames.map(async (region) => {
+            const services = await getAvailableServices(
+              selectedTimestamp,
+              region
+            );
+            return {
+              name: region,
+              resourceCount: services.length,
+              complianceScore: 90, // Default score, could be calculated based on service data
+            };
+          })
+        );
+        setRegions(updatedRegions);
+        setIsLoading(false);
+      });
+    }
+  }, [selectedTimestamp]);
+
+  useEffect(() => {
+    if (selectedTimestamp && selectedRegion) {
+      // Load available services for selected region
+      setIsLoadingServices(true);
+      getAvailableServices(selectedTimestamp, selectedRegion).then(
+        (services) => {
+          setAvailableServices(services);
+          setIsLoadingServices(false);
+        }
+      );
+    }
+  }, [selectedTimestamp, selectedRegion]);
+
+  // Generate skeleton cards for loading state
+  const skeletonCards = Array.from({ length: 12 }, (_, i) => (
+    <RegionCardSkeleton key={i} />
+  ));
 
   return (
     <div className="space-y-3 w-full">
       <div className="flex justify-between items-center px-3 py-2 border-b border-border">
-      <Breadcrumb>
-        <BreadcrumbItem>
-          <BreadcrumbLink href="/">Scans</BreadcrumbLink>
-        </BreadcrumbItem>
-      </Breadcrumb>
+        <Breadcrumb>
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/">Scans</BreadcrumbLink>
+          </BreadcrumbItem>
+        </Breadcrumb>
 
-      <Button
+        <Button
           variant="default"
           size="sm"
           className="text-white font-medium w-[100px]"
@@ -62,26 +110,35 @@ export default function DashboardPage() {
         </Button>
       </div>
       <div className="flex justify-between items-center px-3">
+        {isLoading ? (
+          <Skeleton className="h-4 w-[60px]" />
+        ) : (
           <p className="text-sm text-white font-medium">Regions</p>
-          <TimestampSelector
-            timestamps={timestamps}
-            onSelect={setSelectedTimestamp}
-          />
+        )}
+        <TimestampSelector
+          timestamps={timestamps}
+          onSelect={setSelectedTimestamp}
+          isLoading={isLoading}
+        />
       </div>
       <div className="grid grid-cols-1 px-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        {regions.map((region) => (
-          <RegionCard
-            key={region.name}
-            region={region}
-            onClick={() => setSelectedRegion(region.name)}
-          />
-        ))}
+        {isLoading
+          ? skeletonCards
+          : regions.map((region) => (
+              <RegionCard
+                key={region.name}
+                region={region}
+                onClick={() => setSelectedRegion(region.name)}
+              />
+            ))}
       </div>
       <ServiceDrawer
         isOpen={!!selectedRegion}
         onClose={() => setSelectedRegion(null)}
         region={selectedRegion}
         timestamp={selectedTimestamp}
+        services={availableServices}
+        isLoading={isLoadingServices}
       />
     </div>
   );

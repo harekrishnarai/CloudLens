@@ -1,0 +1,16 @@
+{
+  "KMSKeys": [
+    {
+      "KeyId": "dbf95c90-0c2b-4fe5-96f2-bd90acf90b81",
+      "Arn": "arn:aws:kms:ap-northeast-3:736789585779:key/dbf95c90-0c2b-4fe5-96f2-bd90acf90b81",
+      "CreationDate": "2024-08-06T04:20:38.998000+00:00",
+      "Enabled": true,
+      "KeyState": "Enabled",
+      "KeyUsage": "ENCRYPT_DECRYPT",
+      "Origin": "AWS_KMS",
+      "KeyManager": "AWS",
+      "RotationEnabled": true,
+      "DeletionDate": null
+    }
+  ]
+}
