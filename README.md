@@ -1,5 +1,5 @@
-![CloudLens Logo](https://github.com/user-attachments/assets/41e784c2-9a32-4951-b4e4-85027cab66da)
 
+![CloudLens](https://github.com/user-attachments/assets/21cac315-91bd-4c07-b0c3-44eff3daf666)
 
 
 ## Project Description
