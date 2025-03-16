@@ -1,0 +1,20 @@
+{
+  "EC2Instances": [
+    {
+      "InstanceId": "i-069be93c682d724d3",
+      "InstanceName": "Highradius_OP_LLM",
+      "PrivateIpAddress": "172.31.43.205",
+      "PublicIpAddress": "43.205.116.151",
+      "State": "running",
+      "IMDSVersion": "IMDSv1"
+    },
+    {
+      "InstanceId": "i-0e9b5489b881ce582",
+      "InstanceName": "Infosec_VM",
+      "PrivateIpAddress": "172.31.0.237",
+      "PublicIpAddress": "3.110.49.48",
+      "State": "running",
+      "IMDSVersion": "IMDSv2"
+    }
+  ]
+}

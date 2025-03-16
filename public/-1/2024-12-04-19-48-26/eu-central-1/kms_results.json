@@ -1,0 +1,16 @@
+{
+  "KMSKeys": [
+    {
+      "KeyId": "5b7431a2-e35d-4e5f-935c-204d7acddfbd",
+      "Arn": "arn:aws:kms:eu-central-1:736789585779:key/5b7431a2-e35d-4e5f-935c-204d7acddfbd",
+      "CreationDate": "2024-07-17T09:19:52.022000+00:00",
+      "Enabled": true,
+      "KeyState": "Enabled",
+      "KeyUsage": "ENCRYPT_DECRYPT",
+      "Origin": "AWS_KMS",
+      "KeyManager": "AWS",
+      "RotationEnabled": true,
+      "DeletionDate": null
+    }
+  ]
+}

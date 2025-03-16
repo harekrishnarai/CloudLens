@@ -1,0 +1,13 @@
+{
+  "EBSVolumes": [
+    {
+      "VolumeId": "vol-06b19748bdd6da372",
+      "VolumeName": "Unnamed Instance",
+      "CreateTime": "2023-10-17T11:02:43.843000+00:00",
+      "Size": 8,
+      "State": "available",
+      "Encrypted": false,
+      "AttachedInstanceId": null
+    }
+  ]
+}

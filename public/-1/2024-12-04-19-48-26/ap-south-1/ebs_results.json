@@ -1,0 +1,22 @@
+{
+  "EBSVolumes": [
+    {
+      "VolumeId": "vol-09b2b02dba7e472c8",
+      "VolumeName": "Unnamed Instance",
+      "CreateTime": "2024-10-24T08:54:41.233000+00:00",
+      "Size": 8,
+      "State": "in-use",
+      "Encrypted": false,
+      "AttachedInstanceId": "i-0e9b5489b881ce582"
+    },
+    {
+      "VolumeId": "vol-0790ddd0eb92fe480",
+      "VolumeName": "Unnamed Instance",
+      "CreateTime": "2024-07-29T06:15:20.524000+00:00",
+      "Size": 60,
+      "State": "in-use",
+      "Encrypted": false,
+      "AttachedInstanceId": "i-069be93c682d724d3"
+    }
+  ]
+}

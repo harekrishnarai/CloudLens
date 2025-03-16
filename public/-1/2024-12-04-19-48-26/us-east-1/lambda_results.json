@@ -1,0 +1,34 @@
+{
+  "LambdaFunctions": [
+    {
+      "FunctionName": "aws-security-assessment",
+      "Runtime": "python3.12",
+      "Role": "arn:aws:iam::736789585779:role/security-assessment-stack-SecurityAssessmentFunctio-ypj9GrZDubi5",
+      "Handler": "lambda_function.lambda_handler",
+      "CodeSize": 5687,
+      "Description": "",
+      "Timeout": 300,
+      "MemorySize": 256,
+      "LastModified": "2024-12-04T19:42:40.000+0000",
+      "VpcConfig": null,
+      "Environment": {
+        "Variables": {
+          "OUTPUT_BUCKET": "sec-ass-reports-wehre35565"
+        }
+      },
+      "TracingConfig": "PassThrough",
+      "State": null,
+      "LastUpdateStatus": null,
+      "PackageType": "Zip",
+      "Architectures": [
+        "x86_64"
+      ],
+      "EphemeralStorage": 512,
+      "ResourcePolicy": null,
+      "FunctionUrl": {
+        "Enabled": false,
+        "AuthType": null
+      }
+    }
+  ]
+}
